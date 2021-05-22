@@ -1,0 +1,17 @@
+/* Variables */
+@import './scss/variables';
+
+/* App */
+@import './App';
+
+/* Componentes */
+@import './components/Header'; 
+
+* {
+    font-family: Roboto, sans-serif;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
