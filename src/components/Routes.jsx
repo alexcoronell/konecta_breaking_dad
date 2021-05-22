@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from './Header';
 import Characters from './Characters';
+import NotFound from './NotFound';
 
 const Routes = () => {
     return (
@@ -12,7 +13,7 @@ const Routes = () => {
               <Characters />
           </Route>
           <Route path=''>
-           {/*  <NotFound /> */}
+            <NotFound />
           </Route>
           
         </Switch>

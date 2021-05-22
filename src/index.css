@@ -33,6 +33,13 @@ Nav.navigation {
   margin-right: auto;
 }
 
+.NotFound {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 * {
   font-family: Roboto, sans-serif;
 }
