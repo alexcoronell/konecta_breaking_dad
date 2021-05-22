@@ -18,15 +18,14 @@ const Characters = () => {
             <h1>Characters</h1>
             <section className="characters__list row">
             {
-                characterList.map(({char_id, img, name, nickname, birthday, occupation}) => {
+                characterList.map(({char_id, img, name, nickname}) => {
                     return (
                         <Character
+                            key={char_id}
                             char_id = {char_id}
                             img = {img}
                             name = {name}
                             nickname = {nickname}
-                            birthday = {birthday}
-                            occupation = {occupation}
                         />
                     )
                 })
