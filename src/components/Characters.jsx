@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Character from './Character';
+import Pagination from './Pagination';
 
 const Characters = () => {
 
@@ -31,6 +32,7 @@ const Characters = () => {
                 })
             }
             </section>
+            <Pagination />
         </main>
     )
 }

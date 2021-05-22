@@ -23,6 +23,16 @@
   object-fit: contain;
 }
 
+Nav.navigation {
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 * {
   font-family: Roboto, sans-serif;
 }

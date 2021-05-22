@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Character = ({char_id, img, name, nickname}) => {
     console.log(char_id)
@@ -15,6 +16,13 @@ const Character = ({char_id, img, name, nickname}) => {
             </div>
         </article>
     )
+}
+
+Character.propTypes = {
+    char_id: PropTypes.number,
+    img: PropTypes.string,
+    name: PropTypes.string,
+    nickname: PropTypes.string
 }
 
 export default Character
