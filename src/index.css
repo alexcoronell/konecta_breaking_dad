@@ -11,6 +11,9 @@
 .header__picture img {
   max-width: 150px;
 }
+.header__title h1 {
+  color: #046528;
+}
 
 .characters__list {
   width: 100% !important;
@@ -38,6 +41,15 @@ Nav.navigation {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.Footer {
+  border-top: 3px double #046528;
+}
+.Footer h5 {
+  margin: 0;
+  color: #046528;
+  line-height: 3rem;
 }
 
 * {
