@@ -5,8 +5,10 @@ const Characters = () => {
 
     const [characterList, setCharacterList] = useState([]);
 
+    const url = "https://www.breakingbadapi.com/api/characters";
+
     useEffect(() => {
-        fetch('https://www.breakingbadapi.com/api/characters')
+        fetch(url)
             .then(res => res.json())
             .then(res => setCharacterList(res))
     }, [])
