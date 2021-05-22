@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { Button } from '@material-ui/core';
 import PropTypes from 'prop-types'
 
 
@@ -14,7 +15,9 @@ const Character = ({char_id, img, name, nickname}) => {
             </div>
 
             <div className="card-body">
-                <Link to={`/character/${char_id}`} className="card-link">More Info</Link>
+                <Link to={`/character/${char_id}`} className="card-link">
+                    <Button className="mt-2" variant="outlined">More Info</Button>
+                </Link>
             </div>
         </article>
     )
