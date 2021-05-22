@@ -13,13 +13,8 @@
 }
 
 .characters__list {
-  min-width: 360px;
   width: 100% !important;
-  display: flex !important;
-}
-
-.character {
-  margin-left: auto !important;
+  justify-content: center;
 }
 
 .character__img {

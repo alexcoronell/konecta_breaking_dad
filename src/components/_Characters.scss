@@ -1,11 +1,6 @@
 .characters {
     &__list {
-        min-width: 360px;
         width: 100% !important;
-        display: flex !important;
+        justify-content: center;
     }
-}
-
-.character {
-    margin-left: auto !important;
 }
