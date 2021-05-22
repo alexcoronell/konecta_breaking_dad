@@ -1,0 +1,11 @@
+.characters {
+    &__list {
+        min-width: 360px;
+        width: 100% !important;
+        display: flex !important;
+    }
+}
+
+.character {
+    margin-left: auto !important;
+}

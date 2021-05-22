@@ -5,7 +5,9 @@
 @import './App';
 
 /* Componentes */
-@import './components/Header'; 
+@import './components/Header';
+@import './components/Characters';
+@import './components/Character';
 
 * {
     font-family: Roboto, sans-serif;
