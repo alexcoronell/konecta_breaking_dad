@@ -17,4 +17,16 @@ export function getCharactersAll() {
             return res;
         })
         .catch(err => console.log(err));
-} 
+}
+
+export function getCharacterDetail(char_id) {
+    const url = `https://www.breakingbadapi.com/api/characters/${char_id}`;
+    return fetch(url)
+        .then(res => res.json())
+        .then(res => {
+            res = res[0];
+            return res;
+        })
+    .catch(err => console.log(err));
+
+}

@@ -6,8 +6,6 @@ export const useCharacters = () => {
 
     const [page, setPage] = useState(INITIAL_PAGE);
 
-    const [maxPage, setMaxPage] = useState(0)
-
     const handleFirstPage = () => {
         setPage(0)
         console.log(page);

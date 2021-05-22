@@ -30,6 +30,25 @@
   object-fit: contain;
 }
 
+.characterDetail__card {
+  padding: 2rem;
+  box-sizing: content-box;
+}
+.characterDetail__card__picture {
+  padding: 2rem;
+}
+.characterDetail__card__picture img {
+  width: 100%;
+  max-width: 300px;
+}
+.characterDetail__card__containText {
+  padding: 2rem;
+}
+
+.borderDefault {
+  border: 1px solid #046528;
+}
+
 Nav.navigation {
   justify-content: center;
   align-items: center;

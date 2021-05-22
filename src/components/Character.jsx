@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
+
 
 const Character = ({char_id, img, name, nickname}) => {
 
@@ -12,7 +14,7 @@ const Character = ({char_id, img, name, nickname}) => {
             </div>
 
             <div className="card-body">
-                <a href="/" className="card-link">More Info</a>
+                <Link to={`/character/${char_id}`} className="card-link">More Info</Link>
             </div>
         </article>
     )

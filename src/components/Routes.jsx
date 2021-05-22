@@ -11,7 +11,7 @@ const Routes = () => {
         <Router>
         <Header />
           <Switch>
-          <Route path='/character/:id'>
+          <Route path='/character/:char_id'>
               <CharacterDetail />
           </Route>
             <Route exact path='/'>

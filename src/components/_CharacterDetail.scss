@@ -1,0 +1,21 @@
+.characterDetail {
+    &__card {      
+        padding: 2rem;
+        box-sizing: content-box;
+
+        &__picture {
+            padding: 2rem;
+            img {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        &__containText {
+            padding: 2rem;
+        }
+    }
+}
+
+.borderDefault {
+    border: 1px solid $mainColor;
+}
