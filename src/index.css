@@ -20,6 +20,10 @@
   justify-content: center;
 }
 
+.currentPage {
+  cursor: default !important;
+}
+
 .character__img {
   height: 280px !important;
   width: auto;
