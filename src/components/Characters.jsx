@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react'
+
+// Componentes
 import Character from './Character';
 import Pagination from './Pagination';
+
+// Servicios
+import getCharacters from './../services/getCharacters';
 
 const Characters = () => {
 
     const [characterList, setCharacterList] = useState([]);
 
-    const url = "https://www.breakingbadapi.com/api/characters";
-
     useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(res => setCharacterList(res))
+        getCharacters().then(characters => setCharacterList(characters));
     }, [])
 
     return (

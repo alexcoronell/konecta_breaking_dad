@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Character = ({char_id, img, name, nickname}) => {
-    console.log(char_id)
+
     return (
         <article className="character card mx-2" style={{width: '15rem'}}>
             <img src={img} className="card-img-top character__img" alt="..." />
