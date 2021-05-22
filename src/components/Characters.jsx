@@ -4,11 +4,12 @@ import React, { useState, useEffect } from 'react'
 import Character from './Character';
 import { CircularProgress, Button, ButtonGroup } from '@material-ui/core';
 
+// Hooks
+import { useCharacters } from './../hooks/useCharacters';
 
 // Servicios
-import getCharacters from './../services/getCharacters';
+import getCharacters, { getCharactersAll } from './../services/getCharacters';
 
-const INITIAL_PAGE = 0;
 
 const Characters = () => {
 
@@ -16,31 +17,24 @@ const Characters = () => {
 
     const [loading, setLoading] = useState(false)
 
-    const [page, setPage] = useState(INITIAL_PAGE);
+    const [handleFirstPage, handlePrevPage, handleNextPage, handleLastPage, page] = useCharacters()
 
-    //const [maxPage, setMaxPage] = useState(0)
+    const [maxPage, setMaxPage] = useState(0);
 
-    const handleNextPage = () => {
-        setPage(page + 1)
-        console.log(page);
-    }
-
-    const handlePrevPage = () => {
-        if (page > 0) {
-            setPage(page -1)
-        } else {
-            return;
-        }
-    }
 
     useEffect(() => {
         setLoading(true)
         getCharacters()
             .then(characters => setCharacterList(characters))
             .then(() => {
-                setTimeout(() => setLoading(false), 50);
+                setTimeout(() => setLoading(false), 100);
             });
-    }, [])
+        getCharactersAll()
+            .then(charactersAll => {
+                setMaxPage(charactersAll);
+            })
+            .then(console.log(maxPage))
+    }, [maxPage])
 
     useEffect(() => {
         setLoading(true)
@@ -75,9 +69,11 @@ const Characters = () => {
             }
             </section>
             <ButtonGroup size="large" color="primary" aria-label="large outlined primary button group">
+                <Button onClick={handleFirstPage}>First</Button>
                 <Button onClick={handlePrevPage}>Prev</Button>
                 <Button className="currentPage">{page + 1}</Button>
                 <Button onClick={handleNextPage}>Next</Button>
+                <Button onClick={() => handleLastPage(maxPage)}>Last</Button>
             </ButtonGroup>
             </>
             }
