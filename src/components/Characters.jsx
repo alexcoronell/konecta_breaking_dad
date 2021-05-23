@@ -26,6 +26,7 @@ const Characters = () => {
         setLoading(true)
         getCharacters()
             .then(characters => setCharacterList(characters))
+            .then(character => console.log(characterList))
             .then(() => {
                 setTimeout(() => setLoading(false), 100);
             });
@@ -54,7 +55,7 @@ const Characters = () => {
                 <h1>Characters</h1>
             <section className="characters__list row">
             {
-                characterList.map(({char_id, img, name, nickname}) => {
+                characterList.map(({char_id, img, name, nickname, portrayed, birthday, status}) => {
                     return (
                         <Character
                             key={char_id}
@@ -62,6 +63,9 @@ const Characters = () => {
                             img = {img}
                             name = {name}
                             nickname = {nickname}
+                            portrayed = {portrayed}
+                            birthday = {birthday}
+                            status = {status}
                         />
                     )
                 })

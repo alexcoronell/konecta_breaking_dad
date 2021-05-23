@@ -24,12 +24,6 @@
   cursor: default !important;
 }
 
-.character__img {
-  height: 280px !important;
-  width: auto;
-  object-fit: contain;
-}
-
 .characterDetail__card {
   padding: 2rem;
   box-sizing: content-box;
@@ -49,12 +43,8 @@
   border: 1px solid #046528;
 }
 
-.quotesList {
-  padding-left: 0;
-}
-.quotesList__item {
+.quotes {
   text-align: left;
-  font-size: 0.9rem;
   font-style: italic;
 }
 
