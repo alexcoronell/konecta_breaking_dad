@@ -11,10 +11,8 @@ const CharacterDetail = () => {
 
     const {char_id} = useParams();
 
-    const [loading, setLoading] = useState(false)
-
     const [characterDetail, setCharacterDetail] = useState({})
-
+    const [loading, setLoading] = useState(false);
     const AppearanceList = (props) => {
         const appearance = props.item;
         let list;
