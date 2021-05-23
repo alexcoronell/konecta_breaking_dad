@@ -12,16 +12,14 @@ import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
-import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-const Character = ({char_id, img, name, nickname, portrayed}) => {
+const Character = ({char_id, img, name, nickname, portrayed, birthday, status}) => {
 
     const [author, setAuthor] = useState()
 
@@ -77,6 +75,12 @@ const Character = ({char_id, img, name, nickname, portrayed}) => {
             <CardContent>
                 <Typography variant="body2" color="textSecondary" component="p">
                 {`Portrait: ${portrayed}`}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                {`Birthday: ${birthday}`}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                {`Status: ${status}`}
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
