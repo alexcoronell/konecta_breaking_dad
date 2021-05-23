@@ -26,7 +26,6 @@ const Characters = () => {
         setLoading(true)
         getCharacters()
             .then(characters => setCharacterList(characters))
-            .then(character => console.log(characterList))
             .then(() => {
                 setTimeout(() => setLoading(false), 100);
             });

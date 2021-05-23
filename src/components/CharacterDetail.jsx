@@ -6,6 +6,8 @@ import { getCharacterDetail } from './../services/getCharacters';
 
 // Componentes
 import { CircularProgress, Button } from '@material-ui/core';
+import AppearanceList from './AppearanceList';
+import OccupationList from './OccupationList'
 
 const CharacterDetail = () => {
 
@@ -13,34 +15,6 @@ const CharacterDetail = () => {
 
     const [characterDetail, setCharacterDetail] = useState({})
     const [loading, setLoading] = useState(false);
-    const AppearanceList = (props) => {
-        const appearance = props.item;
-        let list;
-        if(appearance) {
-            list = appearance.map((appear) => {
-              return <li className="appearanceList__item list-inline-item" key={appear}>{appear}</li>
-            }) 
-        } else {
-            return list = '';
-        }
-    return (
-        <ul className="appearanceList list-inline-item">{list}</ul>
-      ); 
-    }
-
-    const OccupationList = (props) => {
-        const appearance = props.item;
-        let list;
-        if(appearance) {
-            list = appearance.map((occupation) => {
-              return <li className="occupationList__item" key={occupation}>{occupation}</li>
-            }) 
-        } else {
-            return list = '';
-        }
-    return list;
-    }
-
 
     useEffect(() => {
         setLoading(true)
@@ -68,12 +42,9 @@ const CharacterDetail = () => {
                                 <p><b>Birthday:</b> {characterDetail.birthday}</p>
                                 <p><b>Status:</b> {characterDetail.status}</p>
                                 <p><b>Portrayed:</b> {characterDetail.portrayed}</p>
-                                    <ul className="occupationList">
-                                        <li><b>Occupation</b></li>
-                                        <OccupationList item={characterDetail.occupation} />
-                                    </ul>     
-                                    <p className="list-inline-item"><b>Season Appearance:</b></p>
-                                    <AppearanceList item={characterDetail.appearance} />                 
+                                    
+                                <OccupationList item={characterDetail.occupation} />
+                                <AppearanceList item={characterDetail.appearance} />                 
                             </div>
                         </div>
                         <Link to='/' className="card-link">

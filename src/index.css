@@ -24,6 +24,21 @@
   cursor: default !important;
 }
 
+.quotes {
+  text-align: left;
+  font-style: italic;
+}
+
+Nav.navigation {
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .characterDetail__card {
   padding: 2rem;
   box-sizing: content-box;
@@ -45,25 +60,12 @@
 
 .appearanceList {
   padding-left: 0;
-}
-
-.occupationList {
   list-style: none;
 }
 
-.quotes {
-  text-align: left;
-  font-style: italic;
-}
-
-Nav.navigation {
-  justify-content: center;
-  align-items: center;
-}
-
-.pagination {
-  margin-left: auto;
-  margin-right: auto;
+.occupationList {
+  padding-left: 0;
+  list-style: none;
 }
 
 .NotFound {
