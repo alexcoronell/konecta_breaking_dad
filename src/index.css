@@ -43,6 +43,14 @@
   border: 1px solid #046528;
 }
 
+.appearanceList {
+  padding-left: 0;
+}
+
+.occupationList {
+  list-style: none;
+}
+
 .quotes {
   text-align: left;
   font-style: italic;

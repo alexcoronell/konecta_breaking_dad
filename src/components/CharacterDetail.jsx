@@ -18,15 +18,29 @@ const CharacterDetail = () => {
         let list;
         if(appearance) {
             list = appearance.map((appear) => {
-              return <li className="list-inline-item" key={appear}>{appear}</li>
+              return <li className="appearanceList__item list-inline-item" key={appear}>{appear}</li>
             }) 
         } else {
             return list = '';
         }
     return (
-        <ul className="list-inline-item">{list}</ul>
+        <ul className="appearanceList list-inline-item">{list}</ul>
       ); 
     }
+
+    const OccupationList = (props) => {
+        const appearance = props.item;
+        let list;
+        if(appearance) {
+            list = appearance.map((occupation) => {
+              return <li className="occupationList__item" key={occupation}>{occupation}</li>
+            }) 
+        } else {
+            return list = '';
+        }
+    return list;
+    }
+
 
     useEffect(() => {
         setLoading(true)
@@ -52,9 +66,13 @@ const CharacterDetail = () => {
                             </header>
                             <div className="characterDetail__card__containText__content">
                                 <p><b>Birthday:</b> {characterDetail.birthday}</p>
-                                <p>Status: {characterDetail.status}</p>
-                                <p>Portrayed: {characterDetail.portrayed}</p>     
-                                    <p className="list-inline-item">Season Appearance: </p>
+                                <p><b>Status:</b> {characterDetail.status}</p>
+                                <p><b>Portrayed:</b> {characterDetail.portrayed}</p>
+                                    <ul className="occupationList">
+                                        <li><b>Occupation</b></li>
+                                        <OccupationList item={characterDetail.occupation} />
+                                    </ul>     
+                                    <p className="list-inline-item"><b>Season Appearance:</b></p>
                                     <AppearanceList item={characterDetail.appearance} />                 
                             </div>
                         </div>
