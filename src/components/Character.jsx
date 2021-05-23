@@ -73,13 +73,13 @@ const Character = ({char_id, img, name, nickname, portrayed, birthday, status}) 
                 title={name}
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography variant="body2" color="textSecondary" component="p" className="text-center">
                 {`Portrait: ${portrayed}`}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography variant="body2" color="textSecondary" component="p" className="text-center">
                 {`Birthday: ${birthday}`}
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography variant="body2" color="textSecondary" component="p" className="text-center">
                 {`Status: ${status}`}
                 </Typography>
             </CardContent>
@@ -103,7 +103,7 @@ const Character = ({char_id, img, name, nickname, portrayed, birthday, status}) 
             </CardActions>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
-                <Typography paragraph>Quotes:</Typography>
+                <Typography paragraph className="text-center"><b>Quotes:</b></Typography>
                     <Quotes author={author} />
                 </CardContent>
                 <Link to={`/character/${char_id}`} className="card-link">

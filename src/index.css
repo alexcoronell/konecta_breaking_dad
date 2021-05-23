@@ -29,6 +29,20 @@
   font-style: italic;
 }
 
+.Form__quotes {
+  text-align: left !important;
+  align-items: start !important;
+  width: 100%;
+}
+
+.MuiCardContent-root {
+  text-align: left;
+}
+
+span.MuiButtonBase-root {
+  padding-top: 0.1rem;
+}
+
 Nav.navigation {
   justify-content: center;
   align-items: center;
