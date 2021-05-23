@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import { Button } from '@material-ui/core';
 import PropTypes from 'prop-types'
-//import { CircularProgress } from '@material-ui/core';
 import Quotes from './Quotes';
 
 const Character = ({char_id, img, name, nickname}) => {
@@ -12,7 +11,6 @@ const Character = ({char_id, img, name, nickname}) => {
     useEffect(() => {
         let author = name.replace(' ','+').replace(' ','+').replace('.','');
         setAuthor(author)
-
     }, [name])
     
     return (

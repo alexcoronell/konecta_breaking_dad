@@ -8,7 +8,6 @@ export const useCharacters = () => {
 
     const handleFirstPage = () => {
         setPage(0)
-        console.log(page);
     }
 
      const handlePrevPage = () => {
@@ -25,7 +24,6 @@ export const useCharacters = () => {
 
     const handleLastPage = (maxPage) => {
         setPage(maxPage)
-        console.log(page);
     }
 
 

@@ -33,7 +33,6 @@ const Characters = () => {
             .then(charactersAll => {
                 setMaxPage(charactersAll);
             })
-            .then(console.log(maxPage))
     }, [maxPage])
 
     useEffect(() => {
