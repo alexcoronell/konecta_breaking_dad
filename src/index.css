@@ -49,6 +49,15 @@
   border: 1px solid #046528;
 }
 
+.quotesList {
+  padding-left: 0;
+}
+.quotesList__item {
+  text-align: left;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 Nav.navigation {
   justify-content: center;
   align-items: center;

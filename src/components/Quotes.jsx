@@ -4,24 +4,30 @@ import getQuotes from './../services/getQuotes';
 const Quotes = (author) => {
 
     const [quotes, setQuotes] = useState([]);
+    const [quotesLength, setQuotesLength] = useState(0)
 
     useEffect(() => {
         getQuotes(author)
-            .then(quoteList => setQuotes(quoteList))
+            .then(quote => setQuotes(quote))
     }, [author])
 
+    useEffect(() => {
+        setQuotesLength(quotes.length)
+        console.log(quotes)
+    }, [quotes])
+
     return (
-        <ul className="quotesList pl-0 text-left">
-            {quotes
+        <ul className="quotesList">
+            {quotesLength > 0
                 ? quotes.map(({quote_id, quote}) => {
                     return (
-                        <li className="quotesList__item text-left" key={quote_id}>{quote}</li>
+                        <li className="quotesList__item" key={quote_id}>{quote}</li>
                     )
                 })
-                : <li>Sin Datos</li>
+                : <li>No data</li>
             }
         </ul>
     )
 }
 
-export default Quotes
+export default React.memo(Quotes)

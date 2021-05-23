@@ -1,0 +1,8 @@
+.quotesList {
+    padding-left: 0;
+    &__item {
+        text-align: left;
+        font-size: .9rem;
+        font-style: italic;
+    }
+}
