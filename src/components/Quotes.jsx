@@ -17,28 +17,48 @@ const Quotes = (author) => {
         setLoading(true)
         getQuotes(author)
             .then(quote => setQuotes(quote))
-    }, [author])
+            .then(setQuotesLength(quotes.length))
+            .then(setTimeout(setLoading(false), 300))
+    }, [author, quotes.length])
 
     useEffect(() => {
         
-        setQuotesLength(quotes.length)
-        setTimeout(setLoading(false), 10000)
     }, [quotes])
+
+    const handleChange = (e) => {
+        const data = document.getElementById(e.target.value);
+        const datakey = e.target.value;
+        const author = datakey.replace(/[0-9]+/g,'').replace('-', '').replace('+', ' ')
+        const quote = data.childNodes[1].childNodes[0].textContent;
+        //const iconFav = data.childNodes[0].childNodes[0].childNodes[0].checked;
+        const objeto = {
+            author: author,
+            quote: quote
+        }
+        if(!localStorage.getItem(datakey)) {
+            window.localStorage.setItem(datakey, JSON.stringify(objeto));
+        } else {
+            localStorage.removeItem(datakey)
+        }
+    }
 
     return (
         <>
             {loading
                 ? <CircularProgress />
                 : quotesLength > 0
-                    ? quotes.map(({quote_id, quote}) => {
+                    ? quotes.map(({quote_id, quote, author}) => {
                         return (
                             <FormControlLabel
                                 className='Form__quotes'
                                 key={quote_id}
+                                id={author.replace(" ", "+") + "-" + quote_id}
+                                onChange={handleChange}
                                 control={<Checkbox
                                 icon={<FavoriteBorder />}
                                 checkedIcon={<Favorite />}
-                                name="checkedH" />}
+                                name={author.replace(" ", "+") + "-" + quote_id} />}
+                                value={author.replace(" ", "+") + "-" + quote_id}
                                 label={<Typography className="quotes" paragraph>{quote}</Typography>}
                             />
                         )
