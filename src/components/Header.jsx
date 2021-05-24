@@ -1,13 +1,13 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import Button from '@material-ui/core/Button';
-import Logo from './../assets/images/logo.png'
+import Logo from './../assets/images/logo.png';
+
+import useUser from './../hooks/useUser';
 
 const Header = () => {
 
-    const title = 'The Breaking Dad';
-
-    const isLogged = false;
+    const { isLogged, logout } = useUser()
 
     return (
         <header className="header text-center py-2">
@@ -19,9 +19,7 @@ const Header = () => {
                         <nav className="header__menu col-9 d-flex justify-content-end align-items-center">
                             {
                                 isLogged
-                                    ?   <Link to={`/logout`} className="card-link">
-                                            <Button color="primary">Logout</Button>
-                                        </Link>
+                                    ?   <Button onClick={logout} color="primary">Logout</Button>
                                     :   <Link to={`/login`} className="card-link">
                                             <Button color="primary">Login</Button>
                                         </Link>
