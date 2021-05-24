@@ -15,22 +15,6 @@
   color: #046528;
 }
 
-.form {
-  padding: 3rem;
-  min-height: 72vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.form .inputLogin {
-  color: #046528 !important;
-  margin: 0.5rem 2rem;
-  width: 200px !important;
-}
-.form .MuiButton-label {
-  color: #046528;
-}
-
 .characters__list {
   width: 100% !important;
   justify-content: center;
