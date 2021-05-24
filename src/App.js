@@ -1,12 +1,16 @@
 import React from 'react';
 import Routes from './components/Routes';
 
+import { UserContextProvider } from './context/UserContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <Routes />
-    </div>
+    <UserContextProvider>
+      <div className="App">
+        <Routes />
+      </div>
+    </UserContextProvider>
   );
 }
 
