@@ -1,8 +1,7 @@
 .Footer {
     border-top: 3px double $mainColor;
-
+    width: 100%;
     h5 {
-        margin: 0;
         color: $mainColor;
         line-height: 3rem;
     }

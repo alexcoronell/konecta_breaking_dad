@@ -91,15 +91,19 @@ Nav.navigation {
 
 .Footer {
   border-top: 3px double #046528;
+  width: 100%;
 }
 .Footer h5 {
-  margin: 0;
   color: #046528;
   line-height: 3rem;
 }
 
 * {
   font-family: Roboto, sans-serif;
+}
+
+body {
+  min-height: 100vh;
 }
 
 code {
