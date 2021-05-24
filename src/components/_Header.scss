@@ -5,8 +5,8 @@
             max-width: 150px;
         }
     }
-    &__title {
-        h1 {
+    &__menu {
+        .MuiButton-label {
             color: $mainColor;
         }
     }

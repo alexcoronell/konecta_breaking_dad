@@ -11,7 +11,23 @@
 .header__picture img {
   max-width: 150px;
 }
-.header__title h1 {
+.header__menu .MuiButton-label {
+  color: #046528;
+}
+
+.form {
+  padding: 3rem;
+  min-height: 72vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form .inputLogin {
+  color: #046528 !important;
+  margin: 0.5rem 2rem;
+  width: 200px !important;
+}
+.form .MuiButton-label {
   color: #046528;
 }
 
