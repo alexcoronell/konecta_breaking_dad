@@ -1,10 +1,12 @@
-import React, { useState, useEffect, useCallback, useMemo} from 'react'
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState, useEffect, useCallback } from 'react'
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import Checkbox from '@material-ui/core/Checkbox';
 import Typography from '@material-ui/core/Typography';
+import { Button } from '@material-ui/core';
+import { Link } from "react-router-dom";
+
 
 const MyFavorites = () => {
 
@@ -64,6 +66,9 @@ const MyFavorites = () => {
                       );
                 })
             }
+            <Link to={`/`} className="card-link">
+                <Button className="mt-0 mb-3" variant="outlined">Back</Button>
+            </Link>
         </main>
     )
 }
