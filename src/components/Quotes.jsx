@@ -32,6 +32,7 @@ const Quotes = (author) => {
         const quote = data.childNodes[1].childNodes[0].textContent;
         //const iconFav = data.childNodes[0].childNodes[0].childNodes[0].checked;
         const objeto = {
+            key: datakey,
             author: author,
             quote: quote
         }

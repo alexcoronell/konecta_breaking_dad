@@ -82,6 +82,10 @@ Nav.navigation {
   list-style: none;
 }
 
+.MyFavorites {
+  min-height: 74vh;
+}
+
 .NotFound {
   min-height: 75vh;
   display: flex;
