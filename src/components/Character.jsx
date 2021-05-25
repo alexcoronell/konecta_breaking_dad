@@ -66,7 +66,7 @@ const Character = ({char_id, img, name, nickname, portrayed, birthday, status}) 
                 subheader={`Nickname: ${nickname}`}
             />
             <CardMedia
-                className={classes.media}
+                className={`${classes.media} imgCharacter`}
                 image={img}
                 title={name}
             />

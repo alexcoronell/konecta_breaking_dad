@@ -28,6 +28,10 @@
   display: block;
 }
 
+.imgCharacter {
+  background-position: top !important;
+}
+
 .seequotes {
   cursor: pointer;
 }
