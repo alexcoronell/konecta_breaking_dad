@@ -42,8 +42,8 @@ const MyFavorites = () => {
   
 
     return (
-        <main className="container MyFavorites">
-            <h1>My favorite Quotes</h1>
+        <main className="MyFavorites">
+            <h1 className="mb-4">My favorite Quotes</h1>
             {favQuotes > 0 && <Typography className="quotes" paragraph>Delete</Typography>}
             {
                 favQuotes.map(({key, author, quote}) => {
@@ -54,12 +54,13 @@ const MyFavorites = () => {
                                 id={key}
                                 onChange={handleChange}
                                 control={<Checkbox
-                                icon={<FavoriteBorder />}
+                                icon={<FavoriteBorder/>}
+                                title='Click for delete'
                                 checkedIcon={<Favorite />}
                                 checked='checked'
                                 name={key} />}
                                 value={key}
-                                label={<Typography className="quotes" paragraph>{quote}</Typography>}
+                                label={<Typography className="quotes" paragraph><span className="fs-5 text">{quote}</span> <p className="fw-bold fst-normal">{author}</p></Typography>}
                             />
                       );
                 })

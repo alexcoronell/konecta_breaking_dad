@@ -96,6 +96,7 @@ Nav.navigation {
 
 .MyFavorites {
   min-height: 74vh;
+  max-width: 600px;
 }
 
 .NotFound {

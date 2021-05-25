@@ -12,14 +12,16 @@ export const useCharacters = () => {
 
      const handlePrevPage = () => {
         if (page > 0) {
-            setPage(page -1)
+            setPage(page - 1)
         } else {
             return;
         }
     }
 
     const handleNextPage = (maxPage) => {
-        if(page === maxPage) {
+        if(page < maxPage) {
+            setPage(page + 1)
+        } else {
             return
         }
     }
