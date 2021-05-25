@@ -24,6 +24,10 @@
   cursor: default !important;
 }
 
+.seequotes {
+  cursor: pointer;
+}
+
 .quotes {
   text-align: left;
   font-style: italic;

@@ -15,8 +15,6 @@ import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const Character = ({char_id, img, name, nickname, portrayed, birthday, status}) => {
@@ -84,12 +82,9 @@ const Character = ({char_id, img, name, nickname, portrayed, birthday, status}) 
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
-                <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-                </IconButton>
-                <IconButton aria-label="share">
-                <ShareIcon />
-                </IconButton>
+            <Typography variant="body2" onClick={handleExpandClick} color="textSecondary" component="span" className="text-right seequotes">
+                Click to see the quotes
+                </Typography>
                 <IconButton
                 className={clsx(classes.expand, {
                     [classes.expandOpen]: expanded,
