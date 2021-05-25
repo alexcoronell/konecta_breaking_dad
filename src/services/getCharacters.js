@@ -1,5 +1,4 @@
-const limit = 5;
-export default function getCharacters (page= 0) {
+export default function getCharacters (page= 0, limit = 5) {
     const offset = (page * limit);
     const url = `https://www.breakingbadapi.com/api/characters?limit=${limit}&offset=${offset}`;
 

@@ -24,6 +24,10 @@
   cursor: default !important;
 }
 
+.buttonGroup {
+  display: block;
+}
+
 .seequotes {
   cursor: pointer;
 }
