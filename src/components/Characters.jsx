@@ -74,7 +74,7 @@ const Characters = () => {
                 <Button onClick={handleFirstPage}>First</Button>
                 <Button onClick={handlePrevPage}>Prev</Button>
                 <Button className="currentPage">{page + 1}</Button>
-                <Button onClick={handleNextPage}>Next</Button>
+                <Button onClick={() => handleNextPage(maxPage)}>Next</Button>
                 <Button onClick={() => handleLastPage(maxPage)}>Last</Button>
             </ButtonGroup>
             </>

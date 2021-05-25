@@ -18,8 +18,10 @@ export const useCharacters = () => {
         }
     }
 
-    const handleNextPage = () => {
-        setPage(page + 1)
+    const handleNextPage = (maxPage) => {
+        if(page === maxPage) {
+            return
+        }
     }
 
     const handleLastPage = (maxPage) => {
