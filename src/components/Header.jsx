@@ -14,6 +14,9 @@ const Header = () => {
                             <img className="img-fluid" src={Logo} alt={Logo} />
                         </picture>
                         <nav className="header__menu col-9 d-flex justify-content-end align-items-center">
+                        <Link to={`/`} className="card-link">
+                            <Button color="primary">Home</Button>
+                        </Link> 
                         <Link to={`/myfavorites`} className="card-link">
                             <Button color="primary">My Favorites</Button>
                         </Link> 
