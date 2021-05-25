@@ -117,4 +117,4 @@ Character.propTypes = {
     portrayed: PropTypes.string
 }
 
-export default Character
+export default React.memo(Character)
